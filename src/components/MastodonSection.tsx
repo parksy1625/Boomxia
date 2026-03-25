@@ -2,7 +2,7 @@
 
 import useSWR from "swr";
 import SectionCard from "./SectionCard";
-import { MastodonTag } from "@/app/api/mastodon/route";
+import type { MastodonTag } from "@/types";
 
 const fetcher = (url: string) => fetch(url).then((r) => r.json());
 

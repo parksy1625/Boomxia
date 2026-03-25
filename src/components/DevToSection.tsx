@@ -2,7 +2,7 @@
 
 import useSWR from "swr";
 import SectionCard from "./SectionCard";
-import { DevToArticle } from "@/app/api/devto/route";
+import type { DevToArticle } from "@/types";
 
 const fetcher = (url: string) => fetch(url).then((r) => r.json());
 

@@ -2,7 +2,7 @@
 
 import useSWR from "swr";
 import SectionCard from "./SectionCard";
-import { NewsItem } from "@/app/api/news/route";
+import type { NewsItem } from "@/types";
 
 const fetcher = (url: string) => fetch(url).then((r) => r.json());
 

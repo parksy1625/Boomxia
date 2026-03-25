@@ -2,7 +2,7 @@
 
 import useSWR from "swr";
 import SectionCard from "./SectionCard";
-import { LobstersStory } from "@/app/api/lobsters/route";
+import type { LobstersStory } from "@/types";
 
 const fetcher = (url: string) => fetch(url).then((r) => r.json());
 

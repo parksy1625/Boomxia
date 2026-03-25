@@ -2,7 +2,7 @@
 
 import useSWR from "swr";
 import SectionCard from "./SectionCard";
-import { HNStory } from "@/app/api/hackernews/route";
+import type { HNStory } from "@/types";
 
 const fetcher = (url: string) => fetch(url).then((r) => r.json());
 

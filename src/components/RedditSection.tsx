@@ -3,7 +3,7 @@
 import { useState } from "react";
 import useSWR from "swr";
 import SectionCard from "./SectionCard";
-import { RedditPost } from "@/app/api/reddit/route";
+import type { RedditPost } from "@/types";
 
 const fetcher = (url: string) => fetch(url).then((r) => r.json());
 

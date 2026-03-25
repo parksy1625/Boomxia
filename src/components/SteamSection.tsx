@@ -2,7 +2,7 @@
 
 import useSWR from "swr";
 import SectionCard from "./SectionCard";
-import { SteamGame } from "@/app/api/steam/route";
+import type { SteamGame } from "@/types";
 
 const fetcher = (url: string) => fetch(url).then((r) => r.json());
 

@@ -2,7 +2,7 @@
 
 import useSWR from "swr";
 import SectionCard from "./SectionCard";
-import { BlueSkyTopic } from "@/app/api/bluesky/route";
+import type { BlueSkyTopic } from "@/types";
 
 const fetcher = (url: string) => fetch(url).then((r) => r.json());
 
