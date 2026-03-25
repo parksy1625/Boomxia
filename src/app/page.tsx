@@ -8,6 +8,7 @@ import BlueskySection from "@/components/BlueskySection";
 import SteamSection from "@/components/SteamSection";
 import NewsSection from "@/components/NewsSection";
 import RefreshTimer from "@/components/RefreshTimer";
+import ErrorBoundary from "@/components/ErrorBoundary";
 
 export default function Home() {
   return (
@@ -26,27 +27,27 @@ export default function Home() {
           <SectionLabel icon="💻" label="개발 커뮤니티" />
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-6">
-          <GithubSection />
-          <HackerNewsSection />
-          <DevToSection />
-          <LobstersSection />
+          <ErrorBoundary name="GitHub Trending"><GithubSection /></ErrorBoundary>
+          <ErrorBoundary name="Hacker News"><HackerNewsSection /></ErrorBoundary>
+          <ErrorBoundary name="Dev.to"><DevToSection /></ErrorBoundary>
+          <ErrorBoundary name="Lobste.rs"><LobstersSection /></ErrorBoundary>
         </div>
 
         <div className="mb-3">
           <SectionLabel icon="🌐" label="소셜 미디어" />
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-6">
-          <RedditSection />
-          <MastodonSection />
-          <BlueskySection />
+          <ErrorBoundary name="Reddit"><RedditSection /></ErrorBoundary>
+          <ErrorBoundary name="Mastodon"><MastodonSection /></ErrorBoundary>
+          <ErrorBoundary name="Bluesky"><BlueskySection /></ErrorBoundary>
         </div>
 
         <div className="mb-3">
           <SectionLabel icon="🎮" label="게임 & 뉴스" />
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
-          <SteamSection />
-          <NewsSection />
+          <ErrorBoundary name="Steam"><SteamSection /></ErrorBoundary>
+          <ErrorBoundary name="뉴스"><NewsSection /></ErrorBoundary>
         </div>
       </main>
     </div>
