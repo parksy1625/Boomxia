@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import useSWR from "swr";
 import SectionCard from "./SectionCard";
 import type { GithubRepo } from "@/types";
@@ -67,5 +68,3 @@ export default function GithubSection() {
     </SectionCard>
   );
 }
-
-import { useState } from "react";
